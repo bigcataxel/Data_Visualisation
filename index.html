@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuites de données — Impact sur les entreprises</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- EN-TÊTE -->
+    <header>
+        <h1>FUITES DE DONNÉES</h1>
+        <p class="sous-titre">L'impact des plus grandes violations de données mondiales depuis 2004</p>
+        <p class="source">Source : <a href="https://informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/" target="_blank">Information is Beautiful</a>
+            &nbsp;·&nbsp; <span id="compteur">Chargement…</span>
+        </p>
+    </header>
+
+    <!-- FILTRES -->
+    <div class="filtres">
+
+        <div class="filtre-groupe">
+            <label class="filtre-label">PÉRIODE</label>
+            <div class="slider-conteneur">
+                <span id="annee-min-txt">—</span>
+                <div class="double-slider">
+                    <input type="range" id="annee-min" min="2004" max="2025" value="2004">
+                    <input type="range" id="annee-max" min="2004" max="2025" value="2025">
+                    <div class="slider-piste"><div class="slider-remplissage" id="slider-remplissage"></div></div>
+                </div>
+                <span id="annee-max-txt">—</span>
+            </div>
+        </div>
+
+        <div class="filtre-groupe">
+            <label class="filtre-label" for="filtre-secteur">SECTEUR</label>
+            <select id="filtre-secteur" class="selecteur">
+                <option value="tous">Tous les secteurs</option>
+            </select>
+        </div>
+
+        <button id="btn-reset" class="bouton-reset">↺ Réinitialiser</button>
+
+        <div class="stats-filtres">
+            <div class="stat"><span id="nb-incidents">0</span><small>incidents</small></div>
+            <div class="stat"><span id="nb-records">0</span><small>records exposés</small></div>
+        </div>
+
+    </div>
+
+    <!-- VISUALISATIONS -->
+    <main>
+
+        <!-- 1. Graphique à bulles -->
+        <section class="carte">
+            <h2>Amplitude des fuites</h2>
+            <p class="legende-titre">Chaque bulle = un incident · Taille = nombre de records volés · Couleur = secteur</p>
+            <div id="bulles" class="zone-graphique"></div>
+        </section>
+
+        <!-- 2 & 3. Bar chart + Donut -->
+        <div class="grille-bas">
+
+            <section class="carte">
+                <h2>Évolution par année</h2>
+                <p class="legende-titre">Total des enregistrements exposés par année</p>
+                <div id="barres" class="zone-graphique"></div>
+            </section>
+
+            <section class="carte">
+                <h2>Méthodes d'attaque</h2>
+                <p class="legende-titre">Répartition des incidents par méthode — cliquer pour filtrer</p>
+                <div id="donut" class="zone-graphique"></div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- PIED DE PAGE -->
+    <footer>
+        <p>Données : <a href="https://informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/" target="_blank">Information is Beautiful</a></p>
+        <p>Code : <a href="https://github.com/VOTRE-USERNAME/data-breaches-viz" target="_blank">GitHub →</a></p>
+        <p>Réalisé avec D3.js v7</p>
+    </footer>
+
+    <!-- Tooltip (un seul, partagé par les 3 graphiques) -->
+    <div id="tooltip" class="tooltip"></div>
+
+    <!-- D3.js v7 — seule dépendance -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
