@@ -4,6 +4,14 @@ Tableau de bord interactif visualisant les plus grandes fuites de données mondi
 Chaque incident est représenté par sa taille, son secteur, son année et sa méthode d'attaque,
 avec des filtres coordonnés entre les trois graphiques.
 
+
+## Groupe : 
+> bigcataxel
+> Smile-wq-afk
+> MaximeVitiPro
+> Noah_ndf
+> Mikee-hub
+
 ---
 
 ## Visualisations
@@ -76,9 +84,9 @@ npx http-server .
 
 ## GitHub Pages
 
-> Lien démo : **https://VOTRE-USERNAME.github.io/data-breaches-viz/**
+> Lien démo : **https://bigcataxel.github.io/Data_Visualisation/**
 >
-> *(remplacer `VOTRE-USERNAME` par votre identifiant GitHub)*
+> 
 
 Pour publier :
 1. Pousser les fichiers sur GitHub
@@ -88,12 +96,14 @@ Pour publier :
 ---
 
 ## Captures d'écran
+> <img width="3790" height="1061" alt="image" src="https://github.com/user-attachments/assets/de4cc024-eabf-4236-bb07-d8cfca652b24" />
 
-> *(à ajouter après déploiement)*
+> <img width="1603" height="1748" alt="image" src="https://github.com/user-attachments/assets/e743b202-9601-4836-80c9-2ad11b763111" />
+
+
 
 ---
 
 ## Licence
 
 Données : © Information is Beautiful (CC BY-NC-SA 4.0)  
-Code : MIT
