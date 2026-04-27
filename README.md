@@ -6,11 +6,11 @@ avec des filtres coordonnés entre les trois graphiques.
 
 
 ## Groupe : 
-> bigcataxel
-> Smile-wq-afk
-> MaximeVitiPro
-> Noah_ndf
-> Mikee-hub
+- bigcataxel
+- Smile-wq-afk
+- MaximeVitiPro
+- Noah-ndf
+- Mikee-hub
 
 ---
 
